@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend/*.go",
+        "use": "@vercel/go"
+      }
+    ],
+    "routes": [
+      { "src": "/app/login", "dest": "/api/login.go" },
+      { "src": "/app/signup", "dest": "/api/signup.go" }
+    
+    ]
+  }
+  
