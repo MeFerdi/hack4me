@@ -21,9 +21,9 @@ export default function SignUp() {
                 },
                 body: JSON.stringify({ userID, email, password, phoneNumber, firstName, lastName }),
             });
-
+    
             const data = await response.json();
-
+    
             if (response.ok) {
                 setMessage({ type: "success", text: data.message });
                 setTimeout(() => {
@@ -36,6 +36,7 @@ export default function SignUp() {
             setMessage({ type: "error", text: "An error occurred. Please try again." });
         }
     };
+    
 
     return (
         <div className={styles.container}>
