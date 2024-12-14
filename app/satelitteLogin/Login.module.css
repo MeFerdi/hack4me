@@ -1,21 +1,24 @@
+/* Login.module.css */
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 120px); /* Subtract estimated navbar and footer height */
+    height: calc(100vh - 140px); /* Adjusted height to reduce space */
     width: 100%;
     position: absolute;
-    top: 60px; /* Adjust based on your navbar height */
+    top: 50px; /* Moved up by reducing top */
     left: 0;
     padding: 0 1rem;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
+    margin-bottom: 2rem; /* Added margin at the bottom to push it up from the footer */
 }
 
-.form {
+.signUpGrid {
     width: 100%;
-    max-width: 500px;
-    background-color: rgba(161, 152, 152, 0.2); /* Glassy background */
-    backdrop-filter: blur(5px); /* Blur effect */
+    max-width: 700px;
+    background-color: rgba(161, 152, 152, 0.2);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.125);
     border-radius: 16px;
     padding: 2rem;
@@ -23,9 +26,23 @@
     transition: all 0.3s ease;
 }
 
-.form:hover {
+.signUpGrid:hover {
     transform: scale(1.02);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.signUpTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .formGroup {
@@ -42,9 +59,10 @@
 }
 
 .input {
+    width: 100%;
     padding: 0.75rem;
     border: 1px solid #E60000;
-    background-color: rgb(236, 220, 220);
+    background-color: rgba(236, 220, 220, 0.5);
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -63,6 +81,7 @@
 }
 
 .submitButton {
+    width: 100%;
     padding: 0.75rem;
     background-color: #E60000;
     color: white;
@@ -70,6 +89,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
 .submitButton:hover {
@@ -83,6 +103,7 @@
     padding: 0.75rem;
     border-radius: 8px;
     text-align: center;
+    width: 100%;
 }
 
 .successMessage {
@@ -97,9 +118,8 @@
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    .form {
+    .signUpGrid {
         width: 90%;
         padding: 1rem;
     }
 }
-
