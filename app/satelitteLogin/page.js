@@ -12,7 +12,7 @@ export default function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/satelitteLogin', {
+            const response = await fetch('https://backendhack.onrender.com/satelitteLogin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
