@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"authorization/backend/controllers"
@@ -37,4 +38,5 @@ func main() {
 
 	// Run the server on port 3000
 	router.Run(":3000")
+	fmt.Println()
 }
