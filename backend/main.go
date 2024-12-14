@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"log"
+	"net/http"
 
 	"authorization/backend/controllers"
 	"authorization/backend/initializers"
@@ -36,7 +36,6 @@ func main() {
 	//router.GET("/region", controllers.Region)
 	router.GET("/donorPage/:userID", controllers.GetUserDonations)
 
-	// Run the server on port 3000
-	router.Run(":3000")
-	fmt.Println()
+	http.Handle("/", router)
+
 }
